@@ -99,7 +99,7 @@ const Footer = () => {
               <div className="flex items-center">
                 <MapPin size={16} className="text-blue-400 mr-2" />
                 <span className="text-gray-300 text-sm">
-                  Manipal, Karnataka, India
+                  Newtown, Kolkata West Bengal: 700135
                 </span>
               </div>
               <div className="flex items-center">
