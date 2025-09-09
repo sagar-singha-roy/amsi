@@ -76,19 +76,19 @@ const ContactSection = () => {
       name: "Dr. Raghuvir Pai",
       title: "President, AMSI",
       email: "president@amsi.net.in",
-      image: "/api/placeholder/150/150",
+      image: "/logo/person.png",
     },
     {
       name: "Dr. Gopinath Chattopadyay",
       title: "Chair, International Advisory Committee",
       email: "gopinath@amsi.net.in",
-      image: "/api/placeholder/150/150",
+      image: "/logo/person.png",
     },
     {
       name: "Dr. Anne Gibbs",
       title: "CEO, Asset Management Council Australia",
       email: "anne@amc.org.au",
-      image: "/api/placeholder/150/150",
+      image: "/logo/person.png",
     },
   ];
 
