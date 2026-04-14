@@ -10,6 +10,10 @@ import {
   MessageCircle,
   Users,
   Globe,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Twitter,
 } from "lucide-react";
 
 const ContactSection = () => {
@@ -21,7 +25,7 @@ const ContactSection = () => {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -232,22 +236,36 @@ const ContactSection = () => {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
-                  className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                  href="https://x.com/AMSI_India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-black rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
                 >
-                  <MessageCircle size={20} />
+                  <Twitter size={20} />
                 </a>
                 <a
-                  href="#"
-                  className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center text-white hover:bg-green-700 transition-colors"
+                  href="https://www.facebook.com/AssetManagementSocietyIndia#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#1877F2] rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
                 >
-                  <Users size={20} />
+                  <Facebook size={20} />
                 </a>
                 <a
-                  href="#"
-                  className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors"
+                  href="https://www.linkedin.com/company/asset-management-society-india/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#0A66C2] rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
                 >
-                  <Globe size={20} />
+                  <Linkedin size={20} />
+                </a>
+                <a
+                  href="https://www.instagram.com/amsi_ind/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] rounded-lg flex items-center justify-center text-white hover:opacity-80 transition-opacity"
+                >
+                  <Instagram size={20} />
                 </a>
               </div>
             </div>

@@ -305,7 +305,7 @@ const GallerySection = () => {
         )}
 
         {/* Call to Action */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Share Your AMSI Experience
@@ -319,7 +319,7 @@ const GallerySection = () => {
               <ImageIcon className="ml-2" size={20} />
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

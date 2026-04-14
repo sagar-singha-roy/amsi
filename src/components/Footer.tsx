@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { Twitter, Facebook, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -31,16 +31,36 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://x.com/AMSI_India"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Twitter size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/AssetManagementSocietyIndia#"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <Mail size={20} />
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/asset-management-society-india/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/amsi_ind/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -110,6 +130,41 @@ const Footer = () => {
                 <Mail size={16} className="text-blue-400 mr-2" />
                 <span className="text-gray-300 text-sm">info@amsi.net.in</span>
               </div>
+            </div>
+            {/* Social Icons below Contact Us */}
+            <div className="flex space-x-4 mt-6">
+              <a
+                href="https://x.com/AMSI_India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="https://www.facebook.com/AssetManagementSocietyIndia#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/asset-management-society-india/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/amsi_ind/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
+                <Instagram size={18} />
+              </a>
             </div>
           </div>
         </div>

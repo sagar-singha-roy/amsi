@@ -4,66 +4,67 @@ import Link from "next/link";
 import { Calendar, MapPin, Users, ArrowRight, BookOpen } from "lucide-react";
 
 const WorkshopsSection = () => {
-  const upcomingWorkshops = [
+  const webinars = [
     {
       id: 1,
-      title: "Advanced Asset Management Strategies",
-      date: "2024-03-15",
-      location: "IIT Kharagpur",
-      participants: 50,
-      type: "In-Person",
-      description:
-        "Learn advanced strategies for optimizing asset lifecycle management and maintenance planning.",
-      instructor: "Dr. Raghuvir Pai",
-    },
-    {
-      id: 2,
-      title: "Digital Transformation in Asset Management",
-      date: "2024-04-20",
-      location: "Online",
-      participants: 100,
+      title: "Engineering Asset Management's Digital Evolution",
+      date: "2024-08-01",
+      location: "Online Webinar",
       type: "Virtual",
       description:
-        "Explore how digital technologies are revolutionizing asset management practices.",
-      instructor: "Dr. Gopinath Chattopadyay",
-    },
-    {
-      id: 3,
-      title: "Maintenance and Reliability Engineering",
-      date: "2024-05-10",
-      location: "Manipal Academy",
-      participants: 75,
-      type: "Hybrid",
-      description:
-        "Comprehensive workshop on maintenance strategies and reliability engineering principles.",
-      instructor: "Prof. Anne Gibbs",
+        "This presentation delves into the integration of digital technologies in engineering asset management, highlighting the benefits of enhanced efficiency and predictive maintenance, while also addressing the complex challenges related to technological, business, and governance shifts.",
+      downloadUrl:
+        "https://www.amsi.net.in/amsi-data/uploads/2024/08/Webinar-youtube-links.pdf",
     },
   ];
 
-  const pastWorkshops = [
+  const workshops = [
     {
-      title: "ICMIAM2020 - International Conference",
-      year: "2020",
-      location: "Hybrid",
-      participants: 200,
+      id: 1,
+      title:
+        "Issues and Challenges of Battery Asset Management for Operational Safety Virtual Roundtable",
+      date: "2024-09-30",
+      location: "Virtual Roundtable",
+      type: "Virtual",
       description:
-        "Panel discussion on AMSI formation with delegates from India, Australia, Sweden, UK, and New Zealand.",
+        'The virtual roundtable event, "Issues and Challenges of Battery Asset Management for Operational Safety," held on 30 September 2024, was attended by 207 delegates and was an outstanding success.',
+      downloadUrl:
+        "https://www.amsi.net.in/amsi-data/uploads/2024/10/Roundtable-online-event-on-issues-and-challenges-of-battery-assets.pdf",
     },
     {
-      title: "Asset Management Summer School",
-      year: "2019",
-      location: "IIT Kharagpur",
-      participants: 150,
+      id: 2,
+      title: "Workshop on Asset Management Fundamentals",
+      date: "2022-11-01",
+      location: "Online",
+      type: "Virtual",
       description:
-        "Intensive summer program covering fundamentals of asset management.",
+        "Better Asset Management results in enhanced planning, coordination, communication, competency and decision making for infrastructure organisations. Improving these areas leads to an enhanced bottom line as cost and risk are reduced.",
+      downloadUrl:
+        "https://www.amsi.net.in/amsi-data/uploads/2022/11/Asset-Management-Fundamentals.pdf",
     },
     {
-      title: "MRO Opportunities Workshop",
-      year: "2019",
-      location: "Hyderabad",
-      participants: 100,
+      id: 3,
+      title:
+        "Third International Conference on Maintenance and Intelligent Asset Management",
+      date: "2022-12-15",
+      location: "Conference",
+      type: "Hybrid",
       description:
-        "Workshop on Maintenance, Repair, and Operations opportunities in Indian Defence Industry.",
+        "The international Conference on Maintenance and Intelligent Asset Management(ICMIAM) is a conference series that began in the year 2020.",
+      downloadUrl:
+        "https://www.amsi.net.in/amsi-data/uploads/2022/07/ICMIAM-2022-Brochure..pdf",
+    },
+    {
+      id: 4,
+      title:
+        "One day workshop on leveraging asset management for operational excellence",
+      date: "2022-06-01",
+      location: "Online Workshop",
+      type: "Virtual",
+      description:
+        "Careful planning and utilisation of physical assets such as, plant and equipment, property, facilities and other resources in an organization that constitute the fixed assets of a firm can affect significantly the operational efficiency, costs of goods sold, and delivery of high quality product and services.",
+      downloadUrl:
+        "https://www.amsi.net.in/amsi-data/uploads/2022/06/Asset-Management-Workshop-June.pdf",
     },
   ];
 
@@ -76,103 +77,113 @@ const WorkshopsSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Join our comprehensive workshops and events designed to enhance your
-            asset management knowledge and skills through hands-on learning and
-            expert guidance.
+            asset management knowledge and skills.
           </p>
         </div>
 
-        {/* Upcoming Workshops */}
+        {/* Webinar Announcements Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Upcoming Workshops
+            Webinar Announcements
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {upcomingWorkshops.map((workshop) => (
+            {webinars.map((item) => (
               <div
-                key={workshop.id}
-                className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                key={item.id}
+                className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col"
               >
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span
-                      className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        workshop.type === "In-Person"
-                          ? "bg-blue-100 text-blue-800"
-                          : workshop.type === "Virtual"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-purple-100 text-purple-800"
-                      }`}
-                    >
-                      {workshop.type}
-                    </span>
-                    <div className="flex items-center text-gray-500">
-                      <Users size={16} className="mr-1" />
-                      <span className="text-sm">{workshop.participants}</span>
-                    </div>
-                  </div>
-
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">
-                    {workshop.title}
-                  </h4>
-                  <p className="text-gray-600 mb-4">{workshop.description}</p>
-
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-gray-500">
-                      <Calendar size={16} className="mr-2" />
-                      {/* <span className="text-sm">{new Date(workshop.date).toLocaleDateString()}</span> */}
-                    </div>
-                    <div className="flex items-center text-gray-500">
-                      <MapPin size={16} className="mr-2" />
-                      <span className="text-sm">{workshop.location}</span>
-                    </div>
-                    <div className="flex items-center text-gray-500">
-                      <BookOpen size={16} className="mr-2" />
-                      <span className="text-sm">
-                        Instructor: {workshop.instructor}
-                      </span>
-                    </div>
-                  </div>
-
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center">
-                    Register Now
-                    <ArrowRight className="ml-2" size={16} />
-                  </button>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                    {item.type}
+                  </span>
                 </div>
+
+                <h4 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 mb-4 text-sm flex-grow">
+                  {item.description}
+                </p>
+
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center text-gray-500">
+                    <Calendar size={16} className="mr-2" />
+                    <span className="text-sm">
+                      {new Date(item.date).toLocaleDateString("en-US", {
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </div>
+                  <div className="flex items-center text-gray-500">
+                    <MapPin size={16} className="mr-2" />
+                    <span className="text-sm">{item.location}</span>
+                  </div>
+                </div>
+
+                <a
+                  href={item.downloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center text-sm font-semibold"
+                >
+                  Download
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Past Workshops */}
+        {/* Workshop Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Past Workshops
+            Workshop
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {pastWorkshops.map((workshop, index) => (
+            {workshops.map((item) => (
               <div
-                key={index}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-6"
+                key={item.id}
+                className="bg-white border border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col"
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium text-gray-500">
-                    {workshop.year}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                    {item.type}
                   </span>
+                </div>
+
+                <h4 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-3">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 mb-4 text-sm flex-grow">
+                  {item.description}
+                </p>
+
+                <div className="space-y-2 mb-6">
                   <div className="flex items-center text-gray-500">
-                    <Users size={16} className="mr-1" />
-                    <span className="text-sm">{workshop.participants}</span>
+                    <Calendar size={16} className="mr-2" />
+                    <span className="text-sm">
+                      {new Date(item.date).toLocaleDateString("en-US", {
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </div>
+                  <div className="flex items-center text-gray-500">
+                    <MapPin size={16} className="mr-2" />
+                    <span className="text-sm">{item.location}</span>
                   </div>
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  {workshop.title}
-                </h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  {workshop.description}
-                </p>
-                <div className="flex items-center text-gray-500">
-                  <MapPin size={16} className="mr-2" />
-                  <span className="text-sm">{workshop.location}</span>
-                </div>
+
+                <a
+                  href={item.downloadUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center text-sm font-semibold"
+                >
+                  Download
+                  <ArrowRight className="ml-2" size={16} />
+                </a>
               </div>
             ))}
           </div>
@@ -189,17 +200,17 @@ const WorkshopsSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/workshops"
+              href="/membership"
               className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-200"
             >
-              View All Workshops
+              Become a Member
               <ArrowRight className="ml-2" size={20} />
             </Link>
             <Link
-              href="/membership"
+              href="/contact"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
-              Become a Member
+              Contact Us
             </Link>
           </div>
         </div>
