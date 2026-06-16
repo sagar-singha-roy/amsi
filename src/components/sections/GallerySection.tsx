@@ -40,7 +40,7 @@ const GallerySection = () => {
       title: "Asset Management Workshop",
       date: "2019",
       location: "IIT Kharagpur",
-      description: "Summer school workshop on asset management fundamentals",
+      description: "Summer school activity on asset management fundamentals",
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ const GallerySection = () => {
       title: "Hyderabad Conference 2019",
       date: "2019",
       location: "Hyderabad",
-      description: "Conference and workshops in Hyderabad",
+      description: "Conference and activities in Hyderabad",
     },
     {
       id: 6,
@@ -93,7 +93,7 @@ const GallerySection = () => {
     {
       id: 3,
       title: "Workshop Series Introduction",
-      description: "Introduction to our comprehensive workshop series",
+      description: "Introduction to our comprehensive activities series",
       duration: "2:15",
       thumbnail: "/images/v2.jpg",
       views: "642",

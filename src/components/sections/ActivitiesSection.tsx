@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Calendar, MapPin, Users, ArrowRight, BookOpen } from "lucide-react";
+import { Calendar, MapPin, ArrowRight } from "lucide-react";
 
-const WorkshopsSection = () => {
+const ActivitiesSection = () => {
   const webinars = [
     {
       id: 1,
@@ -73,11 +73,11 @@ const WorkshopsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Workshops & Events
+            Activities & Events
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join our comprehensive workshops and events designed to enhance your
-            asset management knowledge and skills.
+            Join our comprehensive activities and events designed to enhance
+            your asset management knowledge and skills.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ const WorkshopsSection = () => {
         {/* Workshop Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Workshop
+            Activities
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {workshops.map((item) => (
@@ -219,4 +219,4 @@ const WorkshopsSection = () => {
   );
 };
 
-export default WorkshopsSection;
+export default ActivitiesSection;

@@ -13,12 +13,12 @@ import {
 
 const MembershipSection = () => {
   const membershipFeeStructure = [
-    { type: "Student", fee: "INR 354 + GST" },
-    { type: "Individual", fee: "INR 885 + GST" },
-    { type: "Corporate", fee: "INR 29500 + GST" },
-    { type: "Life", fee: "INR 5900 + GST" },
+    { type: "Student", fee: "INR 354" },
+    { type: "Individual", fee: "INR 885" },
+    { type: "Corporate", fee: "INR 29500" },
+    { type: "Life", fee: "INR 5900" },
     { type: "Honorary", fee: "-" },
-    { type: "Admission fee", fee: "INR 118 + GST" },
+    { type: "Admission fee", fee: "INR 118" },
   ];
 
   const membershipClasses = [
@@ -67,9 +67,9 @@ const MembershipSection = () => {
   const membershipBenefits = [
     {
       icon: <BookOpen className="text-blue-600" size={24} />,
-      title: "Exclusive Workshops",
+      title: "Exclusive Activities",
       description:
-        "Access to member-only workshops, seminars, and training programs",
+        "Access to member-only activities, workshops, seminars, and training programs",
     },
     {
       icon: <Users className="text-blue-600" size={24} />,
@@ -115,7 +115,7 @@ const MembershipSection = () => {
               <thead className="bg-blue-700 text-white">
                 <tr>
                   <th className="py-4 px-6 text-left">Member Type</th>
-                  <th className="py-4 px-6 text-left">Fee</th>
+                  <th className="py-4 px-6 text-left">Fee Inclusive of GST</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-blue-100">

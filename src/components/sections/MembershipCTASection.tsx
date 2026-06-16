@@ -7,9 +7,9 @@ const MembershipCTASection = () => {
   const membershipBenefits = [
     {
       icon: <BookOpen className="text-blue-600" size={24} />,
-      title: "Exclusive Workshops",
+      title: "Exclusive Activities",
       description:
-        "Access to member-only workshops, seminars, and training programs",
+        "Access to member-only activities, workshops, seminars, and training programs",
     },
     {
       icon: <Users className="text-blue-600" size={24} />,

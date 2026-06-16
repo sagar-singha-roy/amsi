@@ -12,12 +12,22 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Workshops", href: "/workshops" },
     { name: "Membership", href: "/membership" },
-    { name: "Press", href: "/press" },
+    { name: "Activities", href: "/activities" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
   ];
+
+  const isLinkActive = (itemHref: string) => {
+    if (!pathname) return false;
+    const normalizedPathname = pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+    const normalizedHref = itemHref.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+    
+    if (normalizedHref === "/") {
+      return normalizedPathname === "/";
+    }
+    return normalizedPathname === normalizedHref || normalizedPathname.startsWith(normalizedHref + "/");
+  };
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -25,21 +35,26 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <div className="rounded-lg overflow-hidden flex items-center justify-center">
-                <img
-                  src="/logo/logo.jpg"
-                  alt="AMSI Logo"
-                  className="h-full w-full"
-                />
+            <Link href="/" className="flex flex-col items-center">
+              <div className="flex items-center">
+                <div className="rounded-lg overflow-hidden flex items-center justify-center h-12">
+                  <img
+                    src="/logo/logo.jpg"
+                    alt="AMSI Logo"
+                    className="h-full w-auto"
+                  />
+                </div>
               </div>
+              <span className="text-[10px] font-bold text-blue-900 uppercase tracking-[0.2em] mt-0.5">
+                Eastern Chapter
+              </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = isLinkActive(item.href);
               return (
                 <Link
                   key={item.name}
@@ -72,7 +87,7 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
               {navigation.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive = isLinkActive(item.href);
                 return (
                   <Link
                     key={item.name}

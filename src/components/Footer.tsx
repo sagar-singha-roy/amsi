@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Twitter, Facebook, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import {
+  Twitter,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,21 +16,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-4">
-              {/* <div className="h-10 w-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">AMSI</span>
-              </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-bold">Asset Management Society</h3>
-                <p className="text-sm text-gray-400">India</p>
-              </div> */}
-              <div className="rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="flex flex-col items-start mb-4">
+              <div className="rounded-lg overflow-hidden flex items-center justify-center h-12">
                 <img
                   src="/logo/logo.jpg"
                   alt="AMSI Logo"
-                  className="h-full w-full"
+                  className="h-full w-auto"
                 />
               </div>
+              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mt-1">
+                Eastern Chapter
+              </span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               A membership-based, not-for-profit organization dedicated to
@@ -79,10 +83,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/workshops"
+                  href="/activities"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Workshops
+                  Activities
                 </Link>
               </li>
               <li>
@@ -91,14 +95,6 @@ const Footer = () => {
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Membership
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/press"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Press
                 </Link>
               </li>
               <li>

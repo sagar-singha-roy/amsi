@@ -42,10 +42,10 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2" size={20} />
               </Link>
               <Link
-                href="/workshops"
+                href="/activities"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-colors duration-200"
               >
-                Explore Workshops
+                Explore Activities
               </Link>
             </div>
 
@@ -63,7 +63,7 @@ const HeroSection = () => {
                   <BookOpen className="text-white" size={24} />
                 </div>
                 <div className="text-2xl font-bold">50+</div>
-                <div className="text-sm text-blue-200">Workshops</div>
+                <div className="text-sm text-blue-200">Activities</div>
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full mx-auto mb-2">
